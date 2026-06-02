@@ -1,0 +1,28 @@
+# n8n WhatsApp AI Agent
+> Importable n8n workflow for building practical WhatsApp AI agents with WAHA, Redis, OpenAI and Supabase.
+
+## Core Files
+
+- `workflow.json`: Sanitized n8n workflow export.
+- `README.md`: Project overview, setup and contribution invitation.
+- `docker-compose.yml`: Local starter stack for n8n, Redis and WAHA.
+- `.env.example`: Environment variable template without real secrets.
+- `SECURITY.md`: Secret handling and production security checklist.
+- `ROADMAP.md`: Planned improvements and good first issues.
+- `CONTRIBUTING.md`: Contribution flow.
+
+## Key Concepts
+
+- WhatsApp input enters through WAHA and an n8n webhook.
+- Redis buffers rapid-fire messages before the AI responds.
+- OpenAI handles text, image and audio understanding.
+- Supabase stores conversations and messages.
+- WAHA sends the response back to WhatsApp.
+- Human handoff is supported through workflow logic.
+
+## Safety Notes
+
+- Do not commit n8n credential exports, webhook IDs, API keys or private URLs.
+- Keep Redis private and protect WAHA with an API key.
+- Use Supabase RLS and least-privilege credentials.
+- Rotate credentials if a workflow export accidentally leaks sensitive metadata.

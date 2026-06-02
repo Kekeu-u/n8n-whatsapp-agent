@@ -1,0 +1,8 @@
+.env
+.env.*
+!.env.example
+.n8n/
+.waha/
+redis-data/
+node_modules/
+*.log
